@@ -2,47 +2,74 @@
         margin-left: 15%;
         margin-right: 15%;
         margin-top: 1%;
+        margin-bottom: 1%;
+        background-image: url('../pictures/background-green.jpg');
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: 0% 0%;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
     }
-
+    
     h1 {
-        font-family: Arial; 
-        color: rgb(231, 166, 36); 
+        color: rgb(36, 24, 2); 
         font-weight: bolder; 
         text-align: center; 
         font-size: 100px;
         margin-top: 1%;
         margin-bottom: 3%;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
     }
-
+    
     .outer-box {
-            border: 10px;
-            border-style: solid;
-            border-color: rgb(192, 123, 6);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            border-radius: 5%;
+        border: 10px;
+        border-style: solid;
+        border-color: rgb(192, 123, 6);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
     }
-
+    
     .inner-box {
-            width: 30%;
-            background-color: rgb(248, 142, 36);
-            padding: 20px;
-            border-radius: 3%;
+        width: 30%;
+        background-color: rgb(248, 142, 36);
+        padding: 20px;
     }
-
-
+    
+    
     h2 {
-            padding: 0;
-            font-family: Arial;
-            color: rgb(73, 41, 23); 
-            font-weight: bolder; 
-            text-align: center;
+        padding: 0;
+        font-family: Arial;
+        color: rgb(73, 41, 23); 
+        font-weight: bolder; 
+        text-align: center;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
     }
-
+    
     ul {
         font-family: Arial;  
         list-style-type: none; 
         text-align: center;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+    }
+    
+    button {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: rgb(231, 166, 36);
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px auto;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+    }
+
+    button:hover {
+      background-color: #2ecc71; /* Changes color when hovered */
     }
