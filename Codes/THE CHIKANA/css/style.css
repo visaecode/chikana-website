@@ -52,24 +52,55 @@
         text-align: center;
         font-family: "Comic Sans MS", "Comic Sans", cursive;
     }
-    
-    button {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        background-color: rgb(231, 166, 36);
+
+    /* Claim Button */
+    .btn {
+        background: #ffb300;
+        color: #fff;
+        font-weight: bold;
         border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px auto;
-        font-family: "Comic Sans MS", "Comic Sans", cursive;
-        border-radius: 12px;
+        padding: 15px 25px;
+        border-radius: 10px;
         cursor: pointer;
-        transition: background-color 0.3s;
-
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: transform 0.2s ease;
     }
 
-    button:hover {
-      background-color: #2ecc71; /* Changes color when hovered */
+    .btn:hover {
+        transform: scale(1.05);
     }
+
+    /* Popover (the reward card) */
+    #reward {
+        background: #fff8d6;
+        border: none;
+        border-radius: 12px;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        color: #333;
+        width: 250px;
+    }
+
+    #reward h3 {
+        color: #ff6f00;
+        margin-bottom: 10px;
+    }
+
+    #reward p {
+        font-size: 16px;
+    }
+
+    /* Close button */
+    .close-btn {
+        background: none;
+        border: none;
+        font-size: 22px;
+        top: 10px;
+        right: 15px;
+        cursor: pointer;
+        color: #777;
+    } 
+    
+    
+
