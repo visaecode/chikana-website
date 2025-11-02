@@ -102,5 +102,46 @@
     border-radius: 5px;
     cursor: pointer;
 }
-    
-   
+
+ul {
+    padding: 0;
+    margin: 0 auto;
+}
+
+ul li {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+ul label {
+    display: inline-block;
+    margin-top: 8px;
+    background: brown;
+    padding: 6px 14px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+ul label:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 767px) {
+
+    .outer-box {
+        flex-direction: column;
+    }
+
+    .inner-box{
+        order: 1;
+        width: 100%;
+    }
+
+    .domeru {
+        order: 2;
+        margin-top: 15px;
+    }
+}
