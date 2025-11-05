@@ -1,11 +1,12 @@
-
+<!DOCTYPE html> 
+<html lang="en"> 
 <head> 
-  <meta charset="UTF-8" /> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-  <title>Nailoong Vibrant Fireworks</title> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Loading Screen</title> 
   <style> 
- 
-/* loadingscreen*/ 
+    
+    /* loadingscreen*/ 
     body { 
       margin: 0; 
       height: 100vh; 
@@ -125,7 +126,7 @@
  
   <div class="loader"> 
     <div class="aura"></div> 
-    <img src="pictures/pinyanijc.png" alt="JC Static"> 
+    <img src="pictures/jc.png" alt="JC Static"> 
     <div class="sparkle"></div> 
     <div class="sparkle"></div> 
     <div class="sparkle"></div> 
@@ -133,55 +134,3 @@
     <div class="sparkle"></div> 
     <div class="sparkle"></div> 
   </div> 
- 
-  <script> 
-    const fireworksContainer = document.getElementById("fireworks"); 
- 
-    const colorSets = [ 
-      ["#ff0000", "#ff7300", "#ffeb00"], 
-      ["#00ffea", "#00a2ff", "#0066ff"], 
-      ["#ff00ff", "#ff1493", "#ff77ff"], 
-      ["#39ff14", "#a8ff00", "#d4ff00"], 
-      ["#ffffff", "#ffd700", "#ff69b4"] 
-    ]; 
- 
-    function randomColorSet() { 
-      return colorSets[Math.floor(Math.random() * colorSets.length)]; 
-    } 
- 
-    function createFirework() { 
-      const colors = randomColorSet(); 
-      const count = 35; 
-      const originX = Math.random() * window.innerWidth; 
-      const originY = Math.random() * window.innerHeight * 0.7; 
- 
-      for (let i = 0; i < count; i++) { 
-        const particle = document.createElement("div"); 
-        particle.classList.add("particle"); 
-        const angle = (Math.PI * 2 * i) / count; 
-        const distance = 100 + Math.random() * 100; 
-        particle.style.left = `${originX}px`; 
-        particle.style.top = `${originY}px`; 
- 
-        particle.style.setProperty("--x", `${Math.cos(angle) * distance}px`); 
-        particle.style.setProperty("--y", `${Math.sin(angle) * distance}px`); 
- 
-        const color = colors[Math.floor(Math.random() * colors.length)]; 
-        particle.style.color = color; 
-        particle.style.background = `radial-gradient(circle, ${color}, transparent)`; 
- 
-        fireworksContainer.appendChild(particle); 
-        setTimeout(() => particle.remove(), 1800); 
-      } 
-    } 
-    setInterval(createFirework, 500); 
- 
-    setTimeout(() => { 
-      document.body.classList.add("fade-out"); 
-      setTimeout(() => { 
-        window.location.href = "subpage.html";  
-      }, 2000);  
-    }, 5000);  
-  </script> 
-</body> 
-</html> 
