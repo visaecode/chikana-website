@@ -1,0 +1,366 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>Chikana: Grow a Garden</title>
+  <style> 
+    :root { 
+      --green: #6fd86f;
+      --dark-brown: #3d1f12;
+      --wood: #5b3526;
+      --border: #7a4a33; 
+      --text: #fff; 
+      --tag: #9b59b6; 
+      --highlight: #f6c344; 
+    } 
+ 
+    * { box-sizing: border-box; } 
+ 
+    body { 
+      margin: 0; 
+      background: url('GoGbg.png') center center / cover no-repeat fixed; 
+      font-family: "Comic Sans MS", "Comic Sans", cursive; 
+      display: flex; 
+      justify-content: center; 
+      padding: 40px; 
+      color: var(--text); 
+    } 
+ 
+    .container { 
+      width: 900px; 
+      background: var(--wood); 
+      border: 8px solid #3a1d10; 
+      border-radius: 10px; 
+      padding: 16px; 
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4); 
+      background-image: 
+url('https://tr.rbxcdn.com/2afb2f4f471c0545c40d69ec67886cc1/420/420/Decal/Png'); 
+      background-size: 100px; 
+      background-repeat: repeat; 
+      background-blend-mode: overlay; 
+    } 
+ 
+    /* Top bar na part */ 
+    .topbar { 
+      background: var(--green); 
+      padding: 12px 16px; 
+      border: 4px solid #3a7c3a; 
+      border-radius: 8px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      color: #2f2f2f; 
+      font-weight: 800; 
+      margin-bottom: 20px; 
+    } 
+ 
+    /* Title text sa itaas*/ 
+    .title { 
+      color: white; 
+      font-weight: 900; 
+      font-size: 24px; 
+      letter-spacing: 1px; 
+      text-shadow: 
+        -2px -2px 0 #0c360c, 
+         2px -2px 0 #0c360c, 
+        -2px  2px 0 #0c360c, 
+         2px  2px 0 #0c360c, 
+         0 0 10px #00ff88; 
+      flex-shrink: 0; 
+      pointer-events: none; 
+    } 
+ 
+     
+    .btn { 
+      display: inline-block; 
+      color: #ffffff; 
+      padding: 10px 20px; 
+      border-radius: 0 !important; /* square edges */ 
+      cursor: pointer; 
+      font-weight: 800; 
+      text-transform: uppercase; 
+      text-align: center; 
+      box-shadow: 0 4px 0 rgba(0,0,0,0.4); 
+      transition: all 0.15s ease; 
+      image-rendering: pixelated; 
+      background-size: 80px; 
+      background-repeat: repeat; 
+      text-shadow: none !important; 
+    } 
+ 
+    /* Restock button blue */ 
+    .btn.restock { 
+      background: #1e90ff 
+url('https://tr.rbxcdn.com/fb8d9da30bcd9dc1efc416c88db01b04/420/420/Decal/Png'); 
+      background-size: 80px; 
+      border: 3px solid #0b5ed7; 
+      box-shadow: 0 4px 0 #0b5ed7; 
+    } 
+ 
+    /* Close button red */ 
+    .btn.close { 
+      background: #ff4040 
+url('https://tr.rbxcdn.com/fb8d9da30bcd9dc1efc416c88db01b04/420/420/Decal/Png'); 
+      background-size: 80px; 
+      border: 3px solid #b30000; 
+      box-shadow: 0 4px 0 #b30000; 
+    } 
+ 
+    .btn:hover { 
+      filter: brightness(1.25); 
+      transform: translateY(-2px); 
+    } 
+    .btn:active { 
+      transform: translateY(2px); 
+      box-shadow: 0 1px 0 rgba(0,0,0,0.4); 
+      filter: brightness(0.9); 
+    } 
+ 
+    /* ung detail button */ 
+    .tag { 
+      display: inline-block; 
+      background: #1e90ff 
+url('https://tr.rbxcdn.com/fb8d9da30bcd9dc1efc416c88db01b04/420/420/Decal/Png'); 
+      background-size: 80px; 
+      background-repeat: repeat; 
+      color: #ffffff; 
+      padding: 10px 20px; 
+      border: 3px solid #0b5ed7; 
+      border-radius: 0 !important; 
+      cursor: pointer; 
+      font-weight: 800; 
+      text-transform: uppercase; 
+      text-align: center; 
+      box-shadow: 0 4px 0 #0b5ed7; 
+      transition: all 0.15s ease; 
+      image-rendering: pixelated; 
+      text-shadow: none !important; 
+    } 
+ 
+    .tag:hover { 
+      filter: brightness(1.25); 
+      transform: translateY(-2px); 
+    } 
+    .tag:active { 
+      transform: translateY(2px); 
+      box-shadow: 0 1px 0 #0b5ed7; 
+      filter: brightness(0.9); 
+    } 
+ 
+    /* card inside of container (6) */ 
+    .card { 
+      position: relative; 
+      background: #2a1408; 
+      border: 6px solid #1a0a04; 
+      border-radius: 10px; 
+      display: flex; 
+      align-items: center; 
+      gap: 20px; 
+      padding: 16px; 
+      margin-bottom: 14px; 
+      transition: transform 0.2s; 
+      overflow: hidden; 
+    } 
+ 
+    .card::before { 
+      content: ""; 
+      position: absolute; 
+      inset: 0; 
+      background-image: 
+url('https://tr.rbxcdn.com/2afb2f4f471c0545c40d69ec67886cc1/420/420/Decal/Png'); 
+      background-size: 80px; 
+      background-repeat: repeat; 
+      opacity: 0.2; 
+      pointer-events: none; 
+    } 
+ 
+    .card:hover { transform: scale(1.02); } 
+ 
+    .thumb { 
+      width: 140px; 
+      height: 100px; 
+      border-radius: 15px; 
+      overflow: hidden; 
+      position: relative; 
+      background-color: #201008; 
+      background-image: 
+url('https://tr.rbxcdn.com/2afb2f4f471c0545c40d69ec67886cc1/420/420/Decal/Png'); 
+      background-size: 60px; 
+      background-repeat: repeat; 
+      background-blend-mode: multiply; 
+      border: 4px solid #000000; 
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    } 
+ 
+    .thumb img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: contain; 
+      transform: scale(0.75); 
+      transition: transform 0.45s ease-in-out; 
+    } 
+ 
+    @keyframes shake { 
+      0% { transform: scale(1.0) translate(0, 0) rotate(0deg); } 
+      15% { transform: scale(1.0) translate(-4px, 3px) rotate(-3deg); } 
+      30% { transform: scale(1.0) translate(4px, -3px) rotate(3deg); } 
+      45% { transform: scale(1.0) translate(-3px, -4px) rotate(-2deg); } 
+      60% { transform: scale(1.0) translate(3px, 4px) rotate(2deg); } 
+      75% { transform: scale(1.0) translate(-4px, 3px) rotate(-3deg); } 
+      100% { transform: scale(1.0) translate(0, 0) rotate(0deg); } 
+    } 
+ 
+    .thumb:hover img { 
+      animation: shake 0.45s infinite; 
+      transform: scale(0.85); 
+    } 
+ 
+    .info { flex: 1; } 
+    .info p { margin: 4px 0; font-weight: 600; } 
+ 
+    .bottombar { 
+      background: var(--dark-brown); 
+      border: 6px solid #1c0d06; 
+      border-radius: 8px; 
+      padding: 14px; 
+      text-align: center; 
+      font-weight: 800; 
+      color: #ddd; 
+      margin-top: 20px; 
+    } 
+ 
+    #modal { 
+      position: fixed; 
+      top: 0; left: 0; right: 0; bottom: 0; 
+      display: none; 
+      justify-content: center; 
+      align-items: center; 
+      z-index: 100; 
+    } 
+    .modal-overlay { 
+      position: absolute; 
+      inset: 0; 
+      background: rgba(0,0,0,0.6); 
+    } 
+    .modal-content { 
+      position: relative; 
+      background-color: #2a1408; 
+      border: 6px solid #1a0a04; 
+      border-radius: 12px; 
+      padding: 24px; 
+      width: 400px; 
+      max-width: 90%; 
+      z-index: 101; 
+      color: #fff; 
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6); 
+      background-image: 
+url('https://tr.rbxcdn.com/2afb2f4f471c0545c40d69ec67886cc1/420/420/Decal/Png'); 
+      background-size: 80px; 
+      background-repeat: repeat; 
+      background-blend-mode: overlay; 
+    } 
+    .modal-close { 
+      position: absolute; 
+      top: 8px; 
+      right: 12px; 
+      font-size: 24px; 
+      font-weight: bold; 
+      cursor: pointer; 
+    } 
+    .modal-thumb { 
+      width: 100%; 
+      height: 180px; 
+      margin-bottom: 16px; 
+      border-radius: 12px; 
+      overflow: hidden; 
+    } 
+    .modal-thumb img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+    } 
+  </style> 
+
+</head> 
+<body> 
+  <div class="container"> 
+    <div class="topbar"> 
+      <div class="title">MEET THE CHIKANA BADDIES</div> 
+      <div class="btns"> 
+        <div class="btn restock">Restock</div> 
+        <div class="btn close">Close</div> 
+      </div> 
+    </div> 
+ 
+    <div class="card"> 
+      <div class="thumb"><img src="jc na prutas.png" alt="Image 1"></div> 
+      <div class="info"> 
+        <p><strong>Name:</strong> Drew Uriel Adriano</p> 
+        <p><strong>Role:</strong> Member</p> 
+        <div class="tag">W4nN4 c M3</div> 
+      </div> 
+    </div> 
+    <div class="card"> 
+      <div class="thumb"><img src="jc na prutas.png" alt="Image 2"></div> 
+      <div class="info"> 
+        <p><strong>Name:</strong> John Carlo Aguilar</p> 
+        <p><strong>Role:</strong> Leader</p> 
+        <div class="tag">W4nN4 c M3</div> 
+      </div> 
+    </div> 
+    <div class="card"> 
+      <div class="thumb"><img src="jc na prutas.png" alt="Image 3"></div> 
+      <div class="info"> 
+        <p><strong>Name:</strong> Jamaica Laigo</p> 
+        <p><strong>Role:</strong> Member</p> 
+        <div class="tag">W4nN4 c M3</div> 
+      </div> 
+    </div> 
+    <div class="card"> 
+      <div class="thumb"><img src="jc na prutas.png" alt="Image 4"></div> 
+      <div class="info"> 
+        <p><strong>Name:</strong> Ryan Dexter Libres</p> 
+        <p><strong>Role:</strong> Planner</p> 
+        <div class="tag">W4nN4 c M3</div> 
+      </div> 
+    </div> 
+    <div class="card"> 
+      <div class="thumb"><img src="jc na prutas.png" alt="Image 5"></div> 
+      <div class="info"> 
+        <p><strong>Name:</strong> John Marvin Soleybar</p> 
+        <p><strong>Role:</strong> Member</p> 
+        <div class="tag">W4nN4 c M3</div> 
+      </div> 
+    </div> 
+    <div class="card"> 
+      <div class="thumb"><img src="jc na prutas.png" alt="Image 6"></div> 
+      <div class="info"> 
+        <p><strong>Name:</strong> Altheo Miguel C. Villamena</p> 
+        <p><strong>Role:</strong> </p> 
+        <div class="tag">W4nN4 c M3</div> 
+      </div> 
+    </div> 
+ 
+    <div class="bottombar">Group CHIKANA</div> 
+ 
+    <div id="modal"> 
+      <div class="modal-overlay"></div> 
+      <div class="modal-content"> 
+        <span class="modal-close">×</span> 
+        <div class="modal-thumb"><img src="" alt="Member"></div> 
+        <div class="modal-info"> 
+          <p><strong>Name:</strong> <span id="modal-name"></span></p> 
+          <p><strong>Role:</strong> <span id="modal-role"></span></p> 
+          <p><strong>Birthday:</strong> <span id="modal-bday"></span></p> 
+          <p><strong>Hobbies:</strong> <span id="modal-hobbies"></span></p> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+</body> 
+</html> 
