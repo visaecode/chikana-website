@@ -10,9 +10,15 @@
         gap: 5%;
     }
 
+    .loader {
+        display: flex;
+        gap: 150px;
+    }
+
+    /*Need this to be review*/
     .img-loader-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 20%;
@@ -24,29 +30,20 @@
             width: auto;
             height: 25%;
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             position: relative;
 
         }
 
-            .aura { 
-                position: absolute;
-                width: 300px; 
-                height: 300px; 
-                border-radius: 50%; 
-                background: conic-gradient(red, orange, yellow, lime, cyan, blue, violet, red); 
-                filter: blur(100px) brightness(2); 
-                animation: spin 6s linear infinite, pulse 3s ease-in-out infinite; 
-                z-index: 1; 
-            } 
-
             .loader img {
-                width: 300px; 
+                width: 100px; 
                 height: auto;
                 align-items: center;
                 justify-content: center;
                 display: flex;
+                flex-direction: row;
                 position: relative;
                 border-radius: 50%; 
                 z-index: 10; 
@@ -369,11 +366,18 @@ ul label:hover {
     height: 100%;
     backface-visibility: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    line-height: 0.5px;
     background-color: #613216;
     z-index: 1;
+    color: aliceblue;
+}
+
+.back2{
+    line-height: 9px;
+    margin-left: 20px;
+    margin-top: 5px;
 }
 
 .back {
@@ -472,6 +476,7 @@ ul label:hover {
 .name {
     color: aliceblue;
     font-size: 50px;
+    -webkit-text-stroke: 2px #1a0a04;
 }
 
 .motto {
@@ -480,6 +485,8 @@ ul label:hover {
 .sheckles {
     font-size: 50px;
     color: rgb(28, 237, 63);
+    -webkit-text-stroke: 2px #1a0a04;
+
 }
 
 .details {
