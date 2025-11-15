@@ -192,7 +192,6 @@
                 width: 90%;
                 height: 80%;
                 padding: 20px;
-                border-radius: 10px;
                 order: 2;
                 overflow: scroll;
                 scrollbar-width: thick;
@@ -488,6 +487,7 @@ ul label:hover {
     font-size: 100px;
 }
 
+/*Responsive */
 @media (max-width: 767px) {
 
     .loader {
@@ -509,55 +509,94 @@ ul label:hover {
         display: flex;
         flex-direction: column;
         height: 150px;
+        gap: 1px;
     }
 
     h1 {
         
-        font-size: 15px;
+        font-size: 20px;
         -webkit-text-stroke: white;
-        justify-content: center;
-        align-items: center;
+        padding-left: 20px;
+        margin-bottom: 10px;
     }
 
     .btns {
         width: 80%;
         height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
     }
 
     .outer-box {
         flex-direction: column;
-    }
-
-    .inner-box{
-        order: 1;
-        width: 100%;
-    }
+    }  
 
     .card {
         height: 450px;
         display: flex;
         flex-direction: column;
-    }
-
-    .front2 {
-        height: 30%;
-        display: flex;
-        flex-direction: column; 
+        
     }
 
     .front {
         height: 50%;
         display: flex;
         flex-direction: column;
+
+        
     }
 
+    .front2 {
+        height: 20%;
+        width: 94%;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 350px;
+        left: 3%;
+        right: 5%; 
+        background-color: rgba(240, 248, 255, 0);
+        
+    }
+
+    .gept{
+        width: 30px;
+        height: 30px;
+    
+    }
+    .shopee{
+        width: 35px;
+        height: 35px;
+    }
+
+    .dr-gft, .jc-gft, .jm-gft, .ry-gft, .mv-gft, .al-gft {
+      height: 65%;
+    }
+    
+    .dr-shp, .jc-shp, .jm-shp, .ry-shp, .mv-shp, .al-shp {
+        height: 65%;
+    }
+    
+    .dr-btn, .jc-btn, .jm-btn, .ry-btn, .mv-btn, .al-btn {
+        height: 43%;
+    }
     .imeydge {
         width: 50%;
         height: auto;
     }
 
     .name {
-        -webkit-text-stroke: white;
-        font-size: 30px;
+        -webkit-text-stroke: aliceblue;
+        font-size: 20px;
+    }
+
+    .motto{
+        font-size: 13px;
+    }
+
+    .sheckles{
+        font-size: 25px;
+        -webkit-text-stroke: aliceblue;
     }
 }
