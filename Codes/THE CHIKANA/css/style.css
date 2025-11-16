@@ -367,10 +367,25 @@ ul label:hover {
     color: aliceblue;
 }
 
-.back2{
+.back2 {
     line-height: 9px;
     margin-left: 20px;
     margin-top: 5px;
+    padding-right: 5%;
+}
+
+.back3 {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5%;
+}
+.back3 ul li {
+    list-style-type: disk;
+}
+.back4 {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5%;
 }
 
 .back {
@@ -543,8 +558,7 @@ ul label:hover {
         height: 50%;
         display: flex;
         flex-direction: column;
-
-        
+        align-items: center;
     }
 
     .front2 {
@@ -553,7 +567,7 @@ ul label:hover {
         display: flex;
         flex-direction: row;
         position: absolute;
-        top: 350px;
+        top: 340px;
         left: 3%;
         right: 5%; 
         background-color: rgba(240, 248, 255, 0);
@@ -584,19 +598,34 @@ ul label:hover {
     .imeydge {
         width: 50%;
         height: auto;
+        margin: 15px 15px 5px 15px;
     }
 
     .name {
         -webkit-text-stroke: aliceblue;
         font-size: 20px;
+        align-items: center;
     }
 
     .motto{
         font-size: 13px;
+        width: 100%;
     }
 
     .sheckles{
         font-size: 25px;
         -webkit-text-stroke: aliceblue;
     }
+
+    .back {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back2{
+        font-size: 13px;
+        margin: 1px 5px 8px 5px;
+    }
+
 }
