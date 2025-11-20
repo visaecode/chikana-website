@@ -290,7 +290,8 @@ ul label {
 }
 
 ul label:hover {
-    transform: scale(1.2);
+    filter: brightness(1.25); 
+    transform: translateY(-2px); 
 }
 
 @font-face {
@@ -429,17 +430,17 @@ ul label:hover {
     
 }
 
-.gept {
+.aygee {
     height: 35px;
     width: 35px;
 }
 
-.shopee {
+.peysbuk {
     height: 35px;
     width: 35px;    
 }
 
-.dr-gft, .jc-gft, .jm-gft, .ry-gft, .mv-gft, .al-gft {
+.instuh {
     background: #ff4040;
     background-size: 90px; 
     border: 3px solid #b30000;
@@ -447,7 +448,7 @@ ul label:hover {
     border-radius: 10px;
 }
 
-.dr-shp, .jc-shp, .jm-shp, .ry-shp, .mv-shp, .al-shp {
+.feysbuk {
     background-color: #1e90ff;
     background-size: 90px; 
     border: 3px solid #0b5ed7; 
@@ -621,7 +622,7 @@ ul label:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+    }   
 
     .back2{
         font-size: 13px;
