@@ -1,21 +1,24 @@
  body {
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-top: 3%;
-        margin-bottom: 1%;
         background-image: url('../pictures/background-green.jpg');
         background-size: cover; 
         background-repeat: no-repeat;
         background-position: 0% 0%;
         font-family: "Comic Sans Neue", sans-serif;
+        align-items: center;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 5%;
     }
 
+    .loader {
+        display: flex;
+        gap: 150px;
+    }
+
+    /*Need this to be review*/
     .img-loader-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 20%;
@@ -24,34 +27,23 @@
             /* Loader */
         .loader-container {
             flex-direction: column;
-            order: 1;
             width: auto;
             height: 25%;
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-            order: 2;
             position: relative;
 
         }
 
-            .aura { 
-                position: absolute;
-                width: 300px; 
-                height: 300px; 
-                border-radius: 50%; 
-                background: conic-gradient(red, orange, yellow, lime, cyan, blue, violet, red); 
-                filter: blur(100px) brightness(2); 
-                animation: spin 6s linear infinite, pulse 3s ease-in-out infinite; 
-                z-index: 1; 
-            } 
-
             .loader img {
-                width: 300px; 
+                width: 100px; 
                 height: auto;
                 align-items: center;
                 justify-content: center;
                 display: flex;
+                flex-direction: row;
                 position: relative;
                 border-radius: 50%; 
                 z-index: 10; 
@@ -79,7 +71,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            order: 1;
         }
 
             .bdy-pcs {
@@ -105,7 +96,6 @@
             border-radius: 25px;
             flex-direction: column;
             gap: 20px;
-            order: 3;
         }
 
             .store-hd {
@@ -125,7 +115,7 @@
                 box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.3);
             }
 
-            /*THEO*/
+            /*Trademark ni Theo*/
                 .btn.restock { 
                     text-align: center;
                     font-size: large;
@@ -134,12 +124,22 @@
                     padding-top: 15px;
                     background: #1e90ff;
                     background-size: 90px; 
-                    border: 3px solid #0b5ed7; 
+                    border: 3px solid #0b5ed7;
                     box-shadow: 0 4px 0 #0b5ed7; 
                     border-radius: 10px;
-                    height: 35%;
-                    width: 15%;
+                    height: 40%;
+                    width: 50%;
+                    margin-left: 1%;
                 } 
+
+                .btns {
+                    margin-top: 30px;
+                    margin-right: 35px;
+                    display: flex;
+                    flex-direction: row;
+                    width: 25%;
+                    height: 100%
+                }
             
                 /* Close button red */ 
                 .btn.close { 
@@ -154,8 +154,8 @@
                     box-shadow: 0 4px 0 #b30000;
                     border-radius: 10px;
                     margin-left: 15px;
-                    height: 35%;
-                    width: 15%;
+                    height: 40%;
+                    width: 50%;
                 } 
             
                 .btn:hover { 
@@ -192,7 +192,6 @@
                 width: 90%;
                 height: 80%;
                 padding: 20px;
-                border-radius: 10px;
                 order: 2;
                 overflow: scroll;
                 scrollbar-width: thick;
@@ -200,48 +199,37 @@
             }
 
 h1 {
+    height: auto;
+    width: 100%;
     margin-right: 4%;
     margin-left: 4%;
     padding: 0%;
     font-family: Arial;
     color:  rgb(255, 255, 255); 
-    -webkit-text-stroke: rgb(255, 255, 255) 0.5px;
+    -webkit-text-stroke: rgb(255, 255, 255) 1px;
     text-shadow: black 1px 1px 3px;
     font-weight: bolder; 
     font-family: "Comic Sans Neue", cursive;
 }
 
+/*btn*/
 ul {
     font-family: Arial;  
     list-style-type: none; 
-    text-align: center;
+    text-align: left;
     font-family: "Comic Sans Neue", sans-serif;
 }
-
-.card:hover {
-    transform: scale(1.02);
-}
-
 
     .popup {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 30px;
         height: 100%;
         background: rgba(0, 0, 0, 0.6);
         display: none;
         justify-content: center;
         align-items: center;
-    }
-
-        #popup1:checked ~ .card,
-        #popup2:checked ~ #popup2-box,
-        #popup3:checked ~ #popup3-box,
-        #popup4:checked ~ #popup4-box,
-        #popup5:checked ~ #popup5-box,
-        #popup6:checked ~ #popup6-box {
-        transform: rotateY(180deg);        
     }
 
     .popup-content {
@@ -261,23 +249,33 @@ ul {
 
     .dr-btn, .jc-btn, .jm-btn, .ry-btn, .mv-btn, .al-btn {
         background: #70bc36;
-        padding: 5px 10px;
+        background-size: 90px; 
+        border: 3px solid #3a6419; 
+        box-shadow: 0 4px 0 #3a6419; 
+        border-radius: 10px;
+        padding: 15px;
+        width: 110px;
+        height: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         color: white;
-        border-radius: 5px;
         cursor: pointer;
-        flex-direction: column;
         order: 2;
     }
 
+/*info*/
 ul {
     padding: 0;
     margin: 0 auto;
+    text-align: left;
+    list-style-type: none;
+    gap: 10px;
 }
 
 ul li {
     margin-top: 15px;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 ul label {
@@ -295,23 +293,6 @@ ul label:hover {
     transform: scale(1.2);
 }
 
-@media (max-width: 767px) {
-
-    .outer-box {
-        flex-direction: column;
-    }
-
-    .inner-box{
-        order: 1;
-        width: 100%;
-    }
-
-    .domeru {
-        order: 2;
-        margin-top: 15px;
-    }
-}
-
 @font-face {
   font-family: 'Comic Sans Neue';
   src: url('fonts/ComicNeue-Bold.ttf') format('truetype'); 
@@ -325,11 +306,15 @@ ul label:hover {
     background-color: #48230e;
     border-radius: 10px;
     border: 6px solid #1a0a04;
-    height: 150px;
+    height: 200px;
     margin-bottom: 15px;
     perspective: 1000px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.card:hover {
+    transform: scale(1.02);
 }
 
 .card-inner {
@@ -339,30 +324,68 @@ ul label:hover {
     transform-style: preserve-3d;
     position: relative;
     transition: transform 0.6s ease;
-
+    display: block;
 }
 
-.front{
+.front {
+    background-color: #48230e;
+    border-radius: 10px;
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    flex-direction: row;
+    z-index: 1;
 }
 
-.back{
+.front2 {
+    padding-top: 2.5%;
+    position: absolute;
+    left: 86%;
+    width: 19%;
+    align-items: right;
+    order: 2;
+    z-index: 2;
+}
+
+.back {
+    background-color: #48230e;
+    border-radius: 10px;
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
+    line-height: 0.5px;
+    background-color: #613216;
+    z-index: 1;
+    color: aliceblue;
+}
+
+.back2 {
+    line-height: 9px;
+    margin-left: 20px;
+    margin-top: 5px;
+    padding-right: 5%;
+}
+
+.back3 {
+    display: flex;
     flex-direction: column;
-    background-color: #0b5ed7;
+    padding-right: 5%;
+}
+.back3 ul li {
+    list-style-type: disk;
+}
+.back4 {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5%;
 }
 
 .back {
@@ -376,4 +399,233 @@ ul label:hover {
 #popup5:checked ~ .card-inner,
 #popup6:checked ~ .card-inner {
     transform: rotateY(180deg);
+}
+
+.imeydge {
+    margin: 15px 0px 15px 15px;
+    border: 4px solid #321809;
+    background-color: rgb(131, 94, 55);
+    max-height: 100%;
+    width: 18%;
+}
+
+.imeydge img:hover {
+    animation: shake 0.3s infinite;
+}
+
+ @keyframes shake { 
+      0% { transform: scale(1.0) translate(0, 0) rotate(0deg); } 
+      15% { transform: scale(1.0) translate(-4px, 3px) rotate(-3deg); } 
+      30% { transform: scale(1.0) translate(4px, -3px) rotate(3deg); } 
+      45% { transform: scale(1.0) translate(-3px, -4px) rotate(-2deg); } 
+      60% { transform: scale(1.0) translate(3px, 4px) rotate(2deg); } 
+      75% { transform: scale(1.0) translate(-4px, 3px) rotate(-3deg); } 
+      100% { transform: scale(1.0) translate(0, 0) rotate(0deg); } 
+}
+
+.imeydge img {
+    max-height: 100%;
+    width: 100%
+    
+}
+
+.gept {
+    height: 35px;
+    width: 35px;
+}
+
+.shopee {
+    height: 35px;
+    width: 35px;    
+}
+
+.dr-gft, .jc-gft, .jm-gft, .ry-gft, .mv-gft, .al-gft {
+    background: #ff4040;
+    background-size: 90px; 
+    border: 3px solid #b30000;
+    box-shadow: 0 4px 0 #b30000;
+    border-radius: 10px;
+}
+
+.dr-shp, .jc-shp, .jm-shp, .ry-shp, .mv-shp, .al-shp {
+    background-color: #1e90ff;
+    background-size: 90px; 
+    border: 3px solid #0b5ed7; 
+    box-shadow: 0 4px 0 #0b5ed7; 
+    border-radius: 10px;
+}
+
+.text {
+    font-size: 50px;
+    font-family: "Comic Sans Neue", sans-serif;
+    color: white;
+    -webkit-text-stroke: 1px #1a0a04;
+    font-weight: bold;
+    text-align: left; 
+}
+.card-inner ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    width: 100%; /* make it fill the card */
+    margin-left: 2%;
+}
+
+.card-inner ul li {
+    display: block;
+    text-align: left; /* override any flex alignment */
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 7px 0;
+    margin-top: 15px;
+}
+
+.name {
+    color: aliceblue;
+    font-size: 50px;
+    -webkit-text-stroke: 2px #1a0a04;
+}
+
+.motto {
+    color: aliceblue;
+}
+.sheckles {
+    font-size: 50px;
+    color: rgb(28, 237, 63);
+    -webkit-text-stroke: 2px #1a0a04;
+
+}
+
+.details {
+    color: white;
+    font-size: 100px;
+}
+
+/*Responsive */
+@media (max-width: 767px) {
+
+    .loader {
+        gap: 50px;
+
+    }
+
+    .loader img {
+        width: 5%;
+        height: 5%;
+    }
+
+    .bdy-pcs {
+        width: 50%;
+        height: auto;
+    }
+
+    .store-hd {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        gap: 1px;
+    }
+
+    h1 {
+        
+        font-size: 20px;
+        -webkit-text-stroke: white;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .btns {
+        width: 80%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .outer-box {
+        flex-direction: column;
+    }  
+
+    .card {
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .front {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .front2 {
+        height: 20%;
+        width: 94%;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 340px;
+        left: 3%;
+        right: 5%; 
+        background-color: rgba(240, 248, 255, 0);
+        
+    }
+
+    .gept{
+        width: 30px;
+        height: 30px;
+    
+    }
+    .shopee{
+        width: 35px;
+        height: 35px;
+    }
+
+    .dr-gft, .jc-gft, .jm-gft, .ry-gft, .mv-gft, .al-gft {
+      height: 65%;
+    }
+    
+    .dr-shp, .jc-shp, .jm-shp, .ry-shp, .mv-shp, .al-shp {
+        height: 65%;
+    }
+    
+    .dr-btn, .jc-btn, .jm-btn, .ry-btn, .mv-btn, .al-btn {
+        height: 43%;
+    }
+    .imeydge {
+        width: 50%;
+        height: auto;
+        margin: 15px 15px 5px 15px;
+    }
+
+    .name {
+        -webkit-text-stroke: aliceblue;
+        font-size: 20px;
+        align-items: center;
+    }
+
+    .motto{
+        font-size: 13px;
+        width: 100%;
+    }
+
+    .sheckles{
+        font-size: 25px;
+        -webkit-text-stroke: aliceblue;
+    }
+
+    .back {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back2{
+        font-size: 13px;
+        margin: 1px 5px 8px 5px;
+    }
+
 }
