@@ -462,6 +462,305 @@ ul label:hover {
     font-size: 100px;
 }
 
+
+/* Chikana Profile */
+
+    .chikana-profile {
+            width:100%; 
+            display:flex; 
+            justify-content:center;
+            
+    }
+
+    .chikana-profile-box {
+            width: 50%; 
+            background:#fafafa; 
+            padding:5px; 
+            border-radius:15px; 
+            text-align:center;
+            margin-top: 0%;
+            background-image: url('../pictures/stud\ bg.png');
+            background-size: 95px;
+            background-position: cover;
+            background-color: rgb(39, 87, 145);
+            border-style: solid;
+            border-color: rgb(67, 47, 25);
+            border-width: 7px;
+    }
+
+    .header {
+            margin-bottom: 3px; 
+            text-align: center; 
+            font-size: 100px;
+            margin-top: 5%;
+            color:  rgb(255, 255, 255); 
+            -webkit-text-stroke: rgb(255, 255, 255) 1px;
+            text-shadow: rgb(6, 46, 15) 1px 6px 3px;
+            font-weight: bolder; 
+            font-family: "Comic Sans Neue", cursive;
+            background-color: #39641920;
+            padding-left: 50%;
+            padding-right: 50%;
+    }
+
+    .gettoknow {
+            font-size: 25px;
+            color:  rgb(255, 255, 255); 
+            text-shadow: black 1px 1px 3px;
+            font-weight: bolder; 
+            font-family: "Comic Sans Neue", cursive;
+            margin-bottom: 10px;
+            margin-top: 5px;
+    }
+
+    .chikana-profile {
+            width:100%; 
+            padding: 15px 0; 
+            display: auto; 
+            justify-content:center;
+            
+    }
+
+    .my-profile {
+            margin: 1%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 800%;
+    }
+
+    .main-profile {
+                width: 100%;
+                height: 150%;
+                background-color: rgb(38, 174, 56);
+                border-radius: 12px;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+                margin: 0px;
+                display: flex;
+                align-items: center;        
+                background-image: url('../pictures/stud\ bg.png');
+                background-size: 90px;
+                border-bottom: black 3px solid;
+                box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.3);
+                padding: 5px 1px;
+    }
+
+    .header-profile {
+            font-size:25px;
+            margin-left: 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #fafafa;
+            text-shadow: black 1px 2px 3px;
+    }
+
+    /*
+
+    UNFINISHED
+    
+    .windows {
+            margin-left: 65%;
+            flex-direction: column;
+    }
+
+    .hide {
+            text-align: center;
+            color: white;
+            padding-top: 15px;
+            background: #1e90ff;
+            background-size: 90px; 
+            border: 3px solid #0b5ed7;
+            box-shadow: 0 4px 0 #0b5ed7; 
+            border-radius: 10px;
+            height: 40%;
+            width: 50%;
+            margin-left: 1%;
+    }
+
+    .minimize {
+            text-align: center;
+            color: white;
+            padding-top: 15px;
+            background: #1e90ff;
+            background-size: 90px; 
+            border: 3px solid #0b5ed7;
+            box-shadow: 0 4px 0 #0b5ed7; 
+            border-radius: 10px;
+            height: 40%;
+            width: 50%;
+            margin-left: 1%;
+    }
+
+    .close {
+            text-align: center;
+            color: white;
+            padding-top: 15px;
+            background: #1e90ff;
+            background-size: 90px; 
+            border: 3px solid #0b5ed7;
+            box-shadow: 0 4px 0 #0b5ed7; 
+            border-radius: 10px;
+            height: 40%;
+            width: 50%;
+            margin-left: 1%;
+    }
+    */
+
+    .my-profile-box {
+            width: 200%;
+            height: 100%;
+            background-image: url('../pictures/stud\ bg.png');
+            background-size: 95px;
+            background-position: cover;
+            background-color: rgb(96, 59, 10);
+            border-style: solid;
+            border-color: rgb(67, 47, 25);
+            border-width: 7px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative; /*  overlapping */
+            overflow: hidden;
+
+            /*width: 60%; 
+            background:#fafafa; 
+            padding:5px; 
+            border-radius:15px; 
+            text-align:center;
+            margin-top: 0%;
+            background-image: url('../pictures/stud\ bg.png');
+            background-size: 95px;
+            background-position: cover;
+            background-color: rgb(108, 66, 11);
+            border-style: solid;
+            border-color: rgb(67, 47, 25);
+            border-width: 7px;
+            */
+    }
+
+    .cover-profile {
+            width: 100%;
+            height: 200px;
+            background: url('https://tse1.mm.bing.net/th/id/OIP.e6Zw_XQi4cyq0jgJ12j2xwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3') center/cover no-repeat;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .dreww {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1e741b;
+            margin-bottom: 15px;
+            margin-top: 50px;
+            object-fit: cover;
+            position: absolute;
+            top: 90px; /* pushes it down to overlap */
+            left: 50%;
+            transform: translateX(-50%);
+    }
+
+    .intro-name {
+        margin-top: 15%;
+        margin-bottom: 3%;
+        margin-left: 24%;
+        font-size: 25px;
+        color: #fafafa;
+        text-shadow: black 1px 2px 3px;
+        background-color: rgb(38, 174, 56);
+        border: solid;
+        border-color: rgb(67, 47, 25);
+        border-radius: 60px;
+        width: 50%;
+        padding: 5px;
+    }
+
+    .misc {
+        background-color: #321809;
+        width: 80%;
+        border: solid;
+        border-color: rgb(23, 16, 9);
+        margin-left: 10%;
+        margin-bottom: 5%;
+
+    }
+
+    .misc-u {
+            display: flex;
+            margin-bottom: 10%;
+    }
+
+    .misc-text {
+        font-size: 20px;
+        color: #fafafa;
+        text-shadow: black 1px 2px 3px;
+        text-align: center;
+    }
+
+    .misc-hobbies {
+        text-align: left;
+        color: #fafafa;
+        margin-left: 100px;
+        margin-right: 0px;
+        flex-direction: column;
+    }
+
+    .header-hobbies {
+        font-size: 20px;
+        color: #ffffff;
+        background-color: #1e741b;
+        border: solid;
+        border-radius: 60px;
+        border-color: rgb(23, 16, 9);
+        width: 120%;
+        text-align: center;
+    }
+
+    .misc-goals {
+        text-align: center;
+        color: #fafafa;
+        margin-left: 150px;
+        margin-right: 0px;
+        flex-direction: column;
+    }
+
+    .header-goals {
+        font-size: 20px;
+        color: #ffffff;
+        background-color: #1e741b;
+        border: solid;
+        border-radius: 60px;
+        border-color: rgb(23, 16, 9);
+        width: 150%;
+        text-align: center;
+    }
+
+    .header-socials {
+        font-size: 20px;
+        color: #fafafa;
+        background-color: #1e741b;
+        border: solid;
+        border-radius: 60px;
+        border-color: rgb(23, 16, 9);
+        width: 30%;
+        text-align: center;
+        flex-direction: column;
+        margin-left: 190px;
+    }
+
+    .social-center {
+        font-size: 20px;     
+        margin-left:2px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+    }
+
+    .social-center a {
+        color: #ffffff;
+    }
+
 /*Responsive */
 @media (max-width: 600px) {
 
