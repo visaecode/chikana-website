@@ -1,6 +1,8 @@
  body {
         background-image: url('../pictures/background-green.jpg');
-        background-size: cover; 
+        background-size: cover;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         background-repeat: no-repeat;
         background-position: 0% 0%;
         font-family: "Comic Sans Neue", sans-serif;
@@ -8,8 +10,39 @@
         display: flex;
         flex-direction: column;
         gap: 5%;
+}
+
+.design {
+    display: flex;
+    gap: 150px;
+}
+
+/* DESIGN */
+.design-container {
+    flex-direction: column;
+    width: auto;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.design img {
+    width: 100px; 
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-radius: 50%; 
+    z-index: 10; 
+    animation: spin 3s linear infinite reverse;
     }
 
+<<<<<<< Updated upstream
     .loader {
         display: flex;
         gap: 150px;
@@ -34,9 +67,39 @@
             justify-content: center;
             align-items: center;
             position: relative;
+=======
+    @keyframes spin { 
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(360deg); } 
+    } 
 
-        }
+.logo {
+    width: auto;
+    height: 250px;
+    order: 1;
 
+}
+>>>>>>> Stashed changes
+
+.main-container {
+    width: 80vw;
+    height: 90vh;
+    border-style: solid;
+    border-color: rgb(67, 47, 25);
+    border-width: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: auto;
+    background-image: url('../pictures/stud\ bg.png');
+    background-size: 90px;
+    background-color: rgb(131, 94, 55);
+    border-radius: 25px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+<<<<<<< Updated upstream
             .loader img {
                 width: 100px; 
                 height: auto;
@@ -157,12 +220,75 @@
                     height: 40%;
                     width: 50%;
                 } 
+=======
+.main-container-header {
+    width: 100%;
+    height: 15%;
+    background-color: rgb(38, 174, 56);
+    border-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;        
+    background-image: url('../pictures/stud\ bg.png');
+    background-size: 90px;
+    border-bottom: black 3px solid;
+    box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.3);
+}
             
-                .btn:hover { 
-                    filter: brightness(1.25); 
-                    transform: translateY(-2px); 
-                } 
+/*RESTOCK AND CLOSE BUTTON CONTAINER*/
+.btns {
+    margin-top: 30px;
+    margin-right: 35px;
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    height: 100%
+}
+                
+/*RESTOCK BUTTON*/
+.btn.restock { 
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+    padding-top: 15px;
+    background: #1e90ff;
+    background-size: 90px; 
+    border: 3px solid #0b5ed7;
+    box-shadow: 0 4px 0 #0b5ed7; 
+    border-radius: 10px;
+    height: 40%;
+    width: 50%;
+    margin-left: 1%;
+} 
 
+/*CLOSE BUTTON*/ 
+.btn.close { 
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+    padding-top: 15px;
+    background: #ff4040;
+    background-size: 90px; 
+    border: 3px solid #b30000; 
+    box-shadow: 0 4px 0 #b30000;
+    border-radius: 10px;
+    margin-left: 15px;
+    height: 40%;
+    width: 50%;
+} 
+>>>>>>> Stashed changes
+            
+.btn:hover { 
+    filter: brightness(1.25); 
+    transform: translateY(-2px); 
+} 
+
+<<<<<<< Updated upstream
                 .btn:active { 
                     transform: translateY(2px); 
                     box-shadow: 0 1px 0 rgba(0,0,0,0.4); 
@@ -197,6 +323,23 @@
                 scrollbar-width: thick;
                 scrollbar-color: rgba(255, 255, 255, 0.429) transparent;
             }
+=======
+.btn:active { 
+    transform: translateY(2px); 
+    box-shadow: 0 1px 0 rgba(0,0,0,0.4); 
+    filter: brightness(0.9); 
+} 
+    
+.inner-container {
+    width: 90%;
+    height: 80%;
+    padding: 20px;
+    order: 2;
+    overflow: scroll;
+    scrollbar-width: thick;
+    scrollbar-color: rgba(255, 255, 255, 0.429) transparent;
+}
+>>>>>>> Stashed changes
 
 .headingname {
     height: auto;
@@ -220,6 +363,7 @@ ul {
     font-family: "Comic Sans Neue", sans-serif;
 }
 
+<<<<<<< Updated upstream
     .popup {
         position: fixed;
         top: 0;
@@ -264,6 +408,25 @@ ul {
     }
 
 /*info*/
+=======
+.dr-btn, .jc-btn, .jm-btn, .ry-btn, .mv-btn, .al-btn {
+    background: #70bc36;
+    background-size: 90px; 
+    border: 3px solid #3a6419; 
+    box-shadow: 0 4px 0 #3a6419; 
+    border-radius: 10px;
+    padding: 15px;
+    width: 110px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    cursor: pointer;
+    order: 2;
+}
+
+/*BUTTON UL LI*/
+>>>>>>> Stashed changes
 ul {
     padding: 0;
     margin: 0 auto;
@@ -379,9 +542,16 @@ ul label:hover {
     flex-direction: column;
     padding-right: 5%;
 }
+<<<<<<< Updated upstream
 .back3 ul li {
     list-style-type: disk;
+=======
+
+.back3 {
+    list-style-type: disc;
+>>>>>>> Stashed changes
 }
+
 .back4 {
     display: flex;
     flex-direction: column;
@@ -468,13 +638,13 @@ ul label:hover {
     margin: 0;
     list-style: none;
     text-align: left;
-    width: 100%; /* make it fill the card */
+    width: 100%; /* MAKE IT FILL THE CARD */
     margin-left: 2%;
 }
 
 .card-inner ul li {
     display: block;
-    text-align: left; /* override any flex alignment */
+    text-align: left; /* OVERRIDE ANY FLEX ALIGNMENT */
     justify-content: flex-start;
     align-items: flex-start;
     margin: 7px 0;
@@ -635,261 +805,250 @@ ul label:hover {
 
 }
 
-/* Chikana Profile */
+/* MAIN PROFILE CONTAINER */
+.header2 {
+    margin-bottom: 3px; 
+    text-align: center; 
+    font-size: 100px;
+    margin-top: 5%;
+    color:  rgb(255, 255, 255); 
+    -webkit-text-stroke: rgb(255, 255, 255) 1px;
+    text-shadow: rgb(6, 46, 15) 1px 6px 3px;
+    font-weight: bolder; 
+    font-family: "Comic Sans Neue", cursive;
+    background-color: #39641920;
+    padding-left: 50%;
+    padding-right: 50%;
+}
 
-    .chikana-profile {
-            width:100%; 
-            display:flex; 
-            justify-content:center;
-            
+.sub-header2 {
+    width:100%; 
+    display:flex; 
+    justify-content:center;
     }
 
-    .chikana-profile-box {
-            width: 50%; 
-            background:#fafafa; 
-            padding:5px; 
-            border-radius:15px; 
-            text-align:center;
-            margin-top: 0%;
-            background-image: url('../pictures/stud\ bg.png');
-            background-size: 95px;
-            background-position: cover;
-            background-color: rgb(39, 87, 145);
-            border-style: solid;
-            border-color: rgb(67, 47, 25);
-            border-width: 7px;
-    }
+.sub-header2-content {
+    width: 50%; 
+    background:#fafafa; 
+    padding:5px; 
+    border-radius:15px; 
+    text-align:center;
+    margin-top: 0%;
+    background-image: url('../pictures/stud\ bg.png');
+    background-size: 95px;
+    background-position: cover;
+    background-color: rgb(39, 87, 145);
+    border-style: solid;
+    border-color: rgb(67, 47, 25);
+    border-width: 7px;
+}
 
-    .header {
-            margin-bottom: 3px; 
-            text-align: center; 
-            font-size: 100px;
-            margin-top: 5%;
-            color:  rgb(255, 255, 255); 
-            -webkit-text-stroke: rgb(255, 255, 255) 1px;
-            text-shadow: rgb(6, 46, 15) 1px 6px 3px;
-            font-weight: bolder; 
-            font-family: "Comic Sans Neue", cursive;
-            background-color: #39641920;
-            padding-left: 50%;
-            padding-right: 50%;
-    }
+.sub-header2-content p {
+    font-size: 25px;
+    color:  rgb(255, 255, 255); 
+    text-shadow: black 1px 1px 3px;
+    font-weight: bolder; 
+    font-family: "Comic Sans Neue", cursive;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
 
-    .gettoknow {
-            font-size: 25px;
-            color:  rgb(255, 255, 255); 
-            text-shadow: black 1px 1px 3px;
-            font-weight: bolder; 
-            font-family: "Comic Sans Neue", cursive;
-            margin-bottom: 10px;
-            margin-top: 5px;
-    }
+.profile-container {
+    width: 49.5vw;
+    height: 100%;
+    background-image: url('../pictures/stud\ bg.png');
+    background-size: 95px;
+    background-position: cover;
+    background-color: rgb(96, 59, 10);
+    border-style: solid;
+    border-color: rgb(67, 47, 25);
+    border-width: 7px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative; /* OVERLAPPING */
+    margin-top: 1%;
+    justify-content: center;
 
-    .chikana-profile {
-            width:100%; 
-            padding: 15px 0; 
-            display: auto; 
-            justify-content:center;
-            
-    }
+}
 
-    .my-profile {
-            margin: 1%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50%;
-            height: 800%;
-    }
+.profile-header {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(38, 174, 56);
+    border-radius: 12px 12px 0px 0px;
+    background-image: url('../pictures/stud\ bg.png');
+    background-size: 90px;
+    border-bottom: black 3px solid;
+    box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.3);
+    padding: 5px 1px;
+    font-size:25px;
+    color: #fafafa;
+    text-shadow: black 1px 2px 3px;
+}
 
-    .main-profile {
-                width: 100%;
-                height: 150%;
-                background-color: rgb(38, 174, 56);
-                border-radius: 12px;
-                border-bottom-left-radius: 0px;
-                border-bottom-right-radius: 0px;
-                margin: 0px;
-                display: flex;
-                align-items: center;        
-                background-image: url('../pictures/stud\ bg.png');
-                background-size: 90px;
-                border-bottom: black 3px solid;
-                box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.3);
-                padding: 5px 1px;
-    }
+.profile-header-content {
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
-    .header-profile {
-            font-size:25px;
-            margin-left: 15px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            color: #fafafa;
-            text-shadow: black 1px 2px 3px;
-    }
+.cover-photo {
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 
-    /*
+/* PROFILE CONTENT */
+.drew-header, .jc-header, .jm-header, .ry-header, .mv-header, .al-header {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
 
-    UNFINISHED
-    
-    .windows {
-            margin-left: 65%;
-            flex-direction: column;
-    }
+.dreww {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #1e741b;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    object-fit: cover;
+    position: absolute;
+    top: 90px; /* pushes it down to overlap */
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-    .hide {
-            text-align: center;
-            color: white;
-            padding-top: 15px;
-            background: #1e90ff;
-            background-size: 90px; 
-            border: 3px solid #0b5ed7;
-            box-shadow: 0 4px 0 #0b5ed7; 
-            border-radius: 10px;
-            height: 40%;
-            width: 50%;
-            margin-left: 1%;
-    }
+.name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
 
-    .minimize {
-            text-align: center;
-            color: white;
-            padding-top: 15px;
-            background: #1e90ff;
-            background-size: 90px; 
-            border: 3px solid #0b5ed7;
-            box-shadow: 0 4px 0 #0b5ed7; 
-            border-radius: 10px;
-            height: 40%;
-            width: 50%;
-            margin-left: 1%;
-    }
+.name-container h6 {
+    margin: 50px 0px 20px 0px;
+    justify-content: center;
+    align-content: center;
+    font-size: 25px;
+    color: #fafafa;
+    text-shadow: black 1px 2px 3px;
+    background-color: rgb(38, 174, 56);
+    border: solid;
+    border-color: rgb(67, 47, 25);
+    border-radius: 60px;
+    width: 50%;
+    padding: 5px;
+}
 
-    .close {
-            text-align: center;
-            color: white;
-            padding-top: 15px;
-            background: #1e90ff;
-            background-size: 90px; 
-            border: 3px solid #0b5ed7;
-            box-shadow: 0 4px 0 #0b5ed7; 
-            border-radius: 10px;
-            height: 40%;
-            width: 50%;
-            margin-left: 1%;
-    }
-    */
+.profile-information {
+    background-color: #321809;
+    width: 80%;
+    border: solid;
+    border-color: rgb(23, 16, 9);
+    margin-left: 10%;
+    margin-bottom: 5%;
+    margin-right: 10%;
+}
 
-    .my-profile-box {
-            width: 200%;
-            height: 100%;
-            background-image: url('../pictures/stud\ bg.png');
-            background-size: 95px;
-            background-position: cover;
-            background-color: rgb(96, 59, 10);
-            border-style: solid;
-            border-color: rgb(67, 47, 25);
-            border-width: 7px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            position: relative; /*  overlapping */
-            overflow: hidden;
+.profile-information p {
+    font-size: 20px;
+    color: #fafafa;
+    text-shadow: black 1px 2px 3px;
+    text-align: center;
+}
 
-            /*width: 60%; 
-            background:#fafafa; 
-            padding:5px; 
-            border-radius:15px; 
-            text-align:center;
-            margin-top: 0%;
-            background-image: url('../pictures/stud\ bg.png');
-            background-size: 95px;
-            background-position: cover;
-            background-color: rgb(108, 66, 11);
-            border-style: solid;
-            border-color: rgb(67, 47, 25);
-            border-width: 7px;
-            */
-    }
+.profile-information-column {
+    display: flex;
+    margin-bottom: 10%;
+}
 
-    .cover-profile {
-            width: 100%;
-            height: 200px;
-            background: url('https://tse1.mm.bing.net/th/id/OIP.e6Zw_XQi4cyq0jgJ12j2xwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3') center/cover no-repeat;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
+.column-hobbies {
+    text-align: left;
+    color: #fafafa;
+    margin-left: 100px;
+    margin-right: 50px;
+    flex-direction: column;
+}
 
-    .dreww {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #1e741b;
-            margin-bottom: 15px;
-            margin-top: 50px;
-            object-fit: cover;
-            position: absolute;
-            top: 90px; /* pushes it down to overlap */
-            left: 50%;
-            transform: translateX(-50%);
-    }
+.column-hobbies p {
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1e741b;
+    border: solid;
+    border-radius: 60px;
+    border-color: rgb(23, 16, 9);
+    width: 100%;
+    text-align: center;
+}
 
-    .intro-name {
-        margin-top: 15%;
-        margin-bottom: 3%;
-        margin-left: 24%;
-        font-size: 25px;
-        color: #fafafa;
-        text-shadow: black 1px 2px 3px;
-        background-color: rgb(38, 174, 56);
-        border: solid;
-        border-color: rgb(67, 47, 25);
-        border-radius: 60px;
-        width: 50%;
-        padding: 5px;
-    }
+.column-hobbies ul li {
+    list-style-type: none;
+    text-align: left;
+    margin-left: 0%;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
 
-    .misc {
-        background-color: #321809;
-        width: 80%;
-        border: solid;
-        border-color: rgb(23, 16, 9);
-        margin-left: 10%;
-        margin-bottom: 5%;
+.column-goals {
+    text-align: right;
+    color: #fafafa;
+    margin-left: 50px;
+    margin-right: 100px;
+    flex-direction: column;
+}
 
-    }
+.column-goals p {
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1e741b;
+    border: solid;
+    border-radius: 60px;
+    border-color: rgb(23, 16, 9);
+    width: 100%;
+    text-align: center;
+}
 
-    .misc-u {
-            display: flex;
-            margin-bottom: 10%;
-    }
+.column-goals ul li {
+    list-style-type: none;
+    text-align: left;
+    margin-left: 0%;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
 
-    .misc-text {
-        font-size: 20px;
-        color: #fafafa;
-        text-shadow: black 1px 2px 3px;
-        text-align: center;
-    }
+.profile-social-header {
+    font-size: 20px;
+    color: #fafafa;
+    background-color: #1e741b;
+    border: solid;
+    border-radius: 60px;
+    border-color: rgb(23, 16, 9);
+    width: 30%;
+    text-align: center;
+    flex-direction: column;
+    margin-left: 190px;
+}
 
-    .misc-hobbies {
-        text-align: left;
-        color: #fafafa;
-        margin-left: 100px;
-        margin-right: 0px;
-        flex-direction: column;
-    }
+.social-logo-container {
+    font-size: 20px;     
+    margin-left:2px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
 
-    .header-hobbies {
-        font-size: 20px;
-        color: #ffffff;
-        background-color: #1e741b;
-        border: solid;
-        border-radius: 60px;
-        border-color: rgb(23, 16, 9);
-        width: 120%;
-        text-align: center;
-    }
+.social-logo-container a {
+    color: #ffffff;
+}
 
+<<<<<<< Updated upstream
     .misc-goals {
         text-align: center;
         color: #fafafa;
@@ -932,3 +1091,152 @@ ul label:hover {
     .social-center a {
         color: #ffffff;
     }
+=======
+/* RESPONSIVE */
+@media (max-width: 600px) {
+
+    .design {
+        gap: 50px;
+    }
+
+    .design img {
+        width: 5%;
+        height: 5%;
+    }
+
+    .img-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+        justify-content: center;
+        width: 50%;
+        height: auto;
+    }
+
+    .main-container-header {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        gap: 1px;
+    }
+
+    h1 {
+        
+        font-size: 20px;
+        -webkit-text-stroke: white;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .btns {
+        width: 80%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }  
+
+    .card {
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .front {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .front2 {
+        height: 20%;
+        width: 94%;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 340px;
+        left: 3%;
+        right: 5%; 
+        background-color: rgba(240, 248, 255, 0);
+    }
+
+    .aygee {
+        width: 30px;
+        height: 30px;
+    
+    }
+    .peysbuk {
+        width: 35px;
+        height: 35px;
+    }
+
+    .instuh {
+      height: 65%;
+    }
+    
+    .feysbuk{
+        height: 65%;
+    }
+    
+    .dr-btn, .jc-btn, .jm-btn, .ry-btn, .mv-btn, .al-btn {
+        height: 43%;
+    }
+
+    .imeydge {
+        width: 50%;
+        height: auto;
+        margin: 15px 15px 5px 15px;
+    }
+
+    .imeydge2 {
+    width: 50%;
+    height: auto;
+    margin: 15px 15px 5px 15px;
+    }
+
+    .name {
+        -webkit-text-stroke: aliceblue;
+        font-size: 20px;
+        align-items: center;
+    }
+
+    .motto{
+        font-size: 13px;
+        width: 100%;
+    }
+
+    .sheckles{
+        font-size: 25px;
+        -webkit-text-stroke: aliceblue;
+    }
+
+    .back {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }   
+
+    .back2{
+        font-size: 10px;
+        margin: 1px 5px 8px 5px;
+    }
+
+    .back3{
+        font-size: 10px;
+        margin: 1px 5px 8px 5px;
+    }
+
+    .back4{
+        font-size: 10px;
+        margin: 1px 5px 8px 5px;
+    }
+}
+>>>>>>> Stashed changes
