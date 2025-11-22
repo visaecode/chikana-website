@@ -450,8 +450,10 @@ ul label:hover {
 }
 
 /* MAIN PROFILE CONTAINER */
-.header2 {
-    margin-bottom: 3px; 
+.title2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px; 
     font-size: 100px;
     margin-top: 5%;
     color:  rgb(255, 255, 255); 
