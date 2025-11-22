@@ -61,9 +61,7 @@ body {
     border-color: rgb(67, 47, 25);
     border-width: 7px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: auto;
     background-image: url('../pictures/stud\ bg.png');
     background-size: 90px;
     background-color: rgb(131, 94, 55);
@@ -239,7 +237,6 @@ ul label:hover {
     margin-bottom: 15px;
     perspective: 1000px;
     display: flex;
-    flex-direction: row;
     width: auto;
 }
 
@@ -250,7 +247,6 @@ ul label:hover {
 .card-inner {
     width: 100%;
     height: 100%;
-    transition: transform 0.6s;
     transform-style: preserve-3d;
     position: relative;
     transition: transform 0.6s ease;
@@ -276,7 +272,6 @@ ul label:hover {
     position: absolute;
     left: 86%;
     width: 19%;
-    align-items: right;
     order: 2;
     z-index: 2;
 }
@@ -457,15 +452,12 @@ ul label:hover {
 /* MAIN PROFILE CONTAINER */
 .header2 {
     margin-bottom: 3px; 
-    text-align: center; 
     font-size: 100px;
     margin-top: 5%;
     color:  rgb(255, 255, 255); 
     -webkit-text-stroke: rgb(255, 255, 255) 1px;
     text-shadow: rgb(6, 46, 15) 1px 6px 3px;
-    font-weight: bolder; 
     font-family: "Comic Sans Neue", cursive;
-    background-color: #39641920;
     padding-left: 50%;
     padding-right: 50%;
 }
@@ -482,11 +474,9 @@ ul label:hover {
     padding:5px; 
     border-radius:15px; 
     text-align:center;
-    margin-top: 0%;
     background-image: url('../pictures/stud\ bg.png');
     background-size: 95px;
-    background-position: cover;
-    background-color: rgb(39, 87, 145);
+    background-color: rgb(38, 174, 56);
     border-style: solid;
     border-color: rgb(67, 47, 25);
     border-width: 7px;
@@ -507,7 +497,6 @@ ul label:hover {
     height: 100%;
     background-image: url('../pictures/stud\ bg.png');
     background-size: 95px;
-    background-position: cover;
     background-color: rgb(96, 59, 10);
     border-style: solid;
     border-color: rgb(67, 47, 25);
@@ -559,9 +548,7 @@ ul label:hover {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    object-fit: cover;
     border: 4px solid #1e741b;
-    margin-bottom: 15px;
     margin-top: 50px;
     object-fit: cover;
     position: absolute;
@@ -573,7 +560,6 @@ ul label:hover {
 .name-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 50px;
     margin-bottom: 5px;
 }
@@ -616,7 +602,6 @@ ul label:hover {
 }
 
 .column-hobbies {
-    text-align: left;
     color: #fafafa;
     margin-left: 100px;
     margin-right: 50px;
@@ -680,8 +665,7 @@ ul label:hover {
     border: solid;
     border-radius: 60px;
     border-color: rgb(23, 16, 9);
-    width: 30%;
-    text-align: center;
+    width: 30%; 
     flex-direction: column;
     margin-left: 190px;
 }
